@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div class="row mt-4" >
+            <h1 class="text-center">Update your Post</h1>
+            <div class="col-6 offset-3">
+                <form action="/workers/update/<%- post.id %>" method="POST" class="validateForm" novalidate>
+                    <div>
+                        <label class="form-label mt-3" for="name">Name </label>
+                        <input class="form-control" type="text" placeholder="eg : Jane" name="name" value=" <%- post.name %> " required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide a name.
+                        </div>
+                    </div>
+                    <div>
+                        <label class="form-label mt-3 bold" for="description">Description</label>
+                        <input class="form-control" placeholder="Tell something about your work"  name="description" id="" cols="13" rows="1" value= <%= post.description %> 
+                            required></input>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please add some description.
+                        </div>
+                    </div>
+                    <div>
+                        <label class="form-label mt-3" for="price">Charges Per Hour</label>
+                        <div class="input-group ">
+                            <span class="input-group-text">$</span>
+                            <input name="charges" required type="number" class="form-control" aria-label="Amount (to the nearest dollar)" value= <%- post.charges %>>
+                            <span class="input-group-text">.00</span>
+                          </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please choose a price.
+                        </div>
+                    </div>
+                    <div>
+                        <label class="form-label mt-3" for="locationn">Location</label>
+                        <input class="form-control" type="text" value=" <%- post.location %> " placeholder="location" name="location" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide a location.
+                        </div>
+                    </div>
+                    <div>
+                        <label class="form-label mt-3" for="locationn">Image</label>
+                        <input class="form-control" type="url" value=" <%- post.image %> " placeholder="imageurl" name="image" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide an image url.
+                        </div>
+                    </div>
+                    <div>
+                        <label class="form-label mt-3" for="experience"> Experience in years </label>
+                        <input class="form-control" type="number" value=<%- post.experience %>  placeholder="eg : 4" name="experience" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide a experience.
+                        </div>
+                    </div>
+                    <div>
+                        <label class="form-label mt-3" for="phone">Ph.no </label>
+                        <input class="form-control" type="text" value=" <%- post.phone %> " placeholder="eg : 9998887770" name="phone" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide a phone.
+                        </div>
+                    </div>
+                    <div>
+                        <label class="form-label mt-3" for="gender">Gender </label>
+                        <select class="form-select" name="gender" value=" <%- post.gender %> " aria-label="Default select example">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">other</option>
+                          </select>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide a gender.
+                        </div>
+                    </div>
+                    <div>
+                        <label class="form-label mt-3" for="age">age </label>
+                        <input class="form-control" type="number" value=<%- post.age %>  placeholder="eg : 25" name="age" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please provide a age.
+                        </div>
+                    </div>
+    
+                    
+                    <button class="btn btn-info mt-4 px-4">Update</button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>
