@@ -8,12 +8,12 @@
 </head>
 <body>
         <div class="row mt-4" >
-            <h1 class="text-center">Update your Post</h1>
+            <h1 class="text-center">Create your Post</h1>
             <div class="col-6 offset-3">
-                <form action="/workers/update/<%- post.id %>" method="POST" class="validateForm" novalidate>
+                <form action="/recruiters/update/<%- post.id %>" method="POST" class="validateForm" novalidate>
                     <div>
                         <label class="form-label mt-3" for="name">Name </label>
-                        <input class="form-control" type="text" placeholder="eg : Jane" name="name" value=" <%- post.name %> " required>
+                        <input class="form-control" type="text" value=" <%- post.name %> " placeholder="eg : Jane" name="name" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -23,7 +23,7 @@
                     </div>
                     <div>
                         <label class="form-label mt-3 bold" for="description">Work Description</label>
-                        <input class="form-control" placeholder="Tell something about your work"  name="description" id="" cols="13" rows="1" value= <%= post.description %> 
+                        <input class="form-control" value=" <%- post.description %> " placeholder="Tell something about your work" name="description" id="" cols="13" rows="1"
                             required></input>
                         <div class="valid-feedback">
                             Looks good!
@@ -33,10 +33,10 @@
                         </div>
                     </div>
                     <div>
-                        <label class="form-label mt-3" for="price">Charges Per Hour</label>
+                        <label class="form-label mt-3" for="money">Offered Money</label>
                         <div class="input-group ">
                             <span class="input-group-text">$</span>
-                            <input name="charges" required type="number" class="form-control" aria-label="Amount (to the nearest dollar)" value= <%- post.charges %>>
+                            <input name="money" required type="number" value=<%- post.money %>  class="form-control" aria-label="Amount (to the nearest dollar)">
                             <span class="input-group-text">.00</span>
                           </div>
                         <div class="valid-feedback">
@@ -66,16 +66,7 @@
                             Please provide an image url.
                         </div>
                     </div>
-                    <div>
-                        <label class="form-label mt-3" for="experience"> Experience in years </label>
-                        <input class="form-control" type="number" value=<%- post.experience %>  placeholder="eg : 4" name="experience" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div class="invalid-feedback">
-                            Please provide a experience.
-                        </div>
-                    </div>
+                    
                     <div>
                         <label class="form-label mt-3" for="phone">Ph.no </label>
                         <input class="form-control" type="text" value=" <%- post.phone %> " placeholder="eg : 9998887770" name="phone" required>
@@ -86,31 +77,9 @@
                             Please provide a phone.
                         </div>
                     </div>
-                    <div>
-                        <label class="form-label mt-3" for="gender">Gender </label>
-                        <select class="form-select" name="gender" value=" <%- post.gender %> " aria-label="Default select example">
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">other</option>
-                          </select>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div class="invalid-feedback">
-                            Please provide a gender.
-                        </div>
-                    </div>
-                    <div>
-                        <label class="form-label mt-3" for="age">age </label>
-                        <input class="form-control" type="number" value=<%- post.age %>  placeholder="eg : 25" name="age" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                        <div class="invalid-feedback">
-                            Please provide a age.
-                        </div>
-                    </div>
                     
+        
+    
                     
                     <button class="btn btn-primary mt-4 px-4">Update</button>
                 </form>

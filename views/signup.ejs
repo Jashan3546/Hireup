@@ -1,17 +1,92 @@
-<h1 style="text-align: center;">Signup page </h1>
-<form action="/users/create" method="POST">
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" required>
-    <label for="email">email</label>
-    <input type="email" id="email" name="email" required>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" required>
-    <label for="confirm_password">Confirm Password</label>
-    <input type="password" id="confirm_password" name="confirm_password" required>
 
-    <button>Submit</button>
+
+
+
+
+
+<div class="row mt-4" >
+    <h1 class="text-center">Sign Up</h1>
+    <div class="col-6 offset-3">
+<form action="/users/create" class="validateForm" novalidate method="POST">
+   
+
+
+    <div>
+        <label class="form-label mt-3" for="name">Name </label>
+        <input class="form-control" type="text" placeholder="eg : Jane" name="name" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please provide a name.
+        </div>
+    </div>
+
+    <div>
+        <label class="form-label mt-3" for="email">Email </label>
+        <input class="form-control" type="email" placeholder="eg : abc@gmail.com" name="email" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please provide a email.
+        </div>
+    </div>
+
+    <div>
+        <label class="form-label mt-3" for="password">Password </label>
+        <input class="form-control" type="password" placeholder="eg : @Abc123#" name="password" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please provide a password.
+        </div>
+    </div>
+
+    <div>
+        <label class="form-label mt-3" for="password">Confirm Password</label>
+        <input class="form-control" type="password" placeholder="eg : @Abc123#" name="confirm_password" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please provide a password.
+        </div>
+    </div>
+
+
+
+    <div class="mt-4 col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="d-grid gap-2">
+    <button class="btn btn-success mt-3">Sign Up</button>
+</div>
+
 </form>
 
-<p>
-    <a href="/users/auth/google">Google signin/signup</a>
-</p>
+<form action="/users/auth/google" method="GET">
+    <div class="d-grid gap-2">
+<button class="btn btn-info mt-2 px-3.5">Google signUp</button>
+</div>
+</form>
+
+<form action="/users/signin" method="GET">
+    <div class="d-grid gap-2">
+<button class="btn btn-primary mt-2 px-3.5">Already have an account? Sign In</button>
+</div>
+</form>
+
+
+</div>
+</div>
+

@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+   
   <div class="d-flex flex-wrap container-fluid justify-content-center">
   <% for( w of allworkers ){ %>
 
@@ -17,24 +18,24 @@
         <p class="card-text"><%- w.description %></p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><%- w.experience %></li>
-        <li class="list-group-item"><%- w.charges %></li>
-        <li class="list-group-item"><%- w.phone %></li>
-        <li class="list-group-item"><%- w.gender %></li>
-        <li class="list-group-item"><%- w.age %></li>
-        <li class="list-group-item"><%- w.location %></li>
+        <li class="list-group-item"><b>Experience</b> - <%- w.experience %> years</li>
+        <li class="list-group-item"><b>Charges</b> - <%- w.charges %> $ per hour</li>
+        <li class="list-group-item"><b>Ph.no</b> - <%- w.phone %></li>
+        <li class="list-group-item"><b>Gender</b> - <%- w.gender %></li>
+        <li class="list-group-item"><b>Age</b> - <%- w.age %> years</li>
+        <li class="list-group-item"><b>Address</b> - <%- w.location %></li>
       </ul>
       <div class="card-body">
         <% if(locals.user.id==w.user){ %>
           <div class="d-felx flex-row align-items-center">
             <form action="/workers/update/<%- w.id %>" method="GET">
               <div class="d-grid gap-2">
-            <button class="btn btn-info mt-2 px-3.5">Update</button>
+            <button class="btn btn-info  mt-2 px-3.5">Update</button>
             </div>
           </form>
           <form action="/workers/delete/<%- w.id %>" method="GET">
             <div class="d-grid gap-2">
-        <button class="btn btn-danger mt-2 px-3.5">Delete</button>
+        <button class="btn btn-danger  mt-2 px-3.5">Delete</button>
         </div>
         </form>
           </div>

@@ -7,6 +7,7 @@ console.log("routes file");
 router.get("/", home_controller.home)
 router.use("/users", require("./users"))
 router.use("/workers", require("./workers"))
+router.use('/recruiters',require('./recruiter'))
 
 
 
